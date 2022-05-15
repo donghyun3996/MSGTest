@@ -21,10 +21,13 @@ import WebKit
 
 class CalculatorVC: UIViewController, Stepper{
    
-    let ExchangeProvider = MoyaProvider<exchangeratesAPI>()
+   
     
     
     //MARK:- Propertise
+    
+    let ExchangeProvider = MoyaProvider<exchangeratesAPI>()
+    
     
     
     var steps = PublishRelay<Step>()
@@ -128,7 +131,7 @@ class CalculatorVC: UIViewController, Stepper{
         view.backgroundColor = .white
         createPickerView()
         
-        dateFormatter.dateFormat = "yyyy-MM-dd-HH:mm"
+        dateFormatter.dateFormat = "yyyy-MM-dd"
         
         
     }
@@ -252,8 +255,8 @@ class CalculatorVC: UIViewController, Stepper{
       }
     
     
-    func fetchLookDetail() {
-        ExchangeProvider.request(.exchage(remittanceCountryTextField.text, remittanceCountryTextField.text, remittanceCountryNumberTextField.text, lookupTimeLabel2.text)) { response in
+    func Provide() {
+        ExchangeProvider.request(.exchage(remittanceCountry: remittanceCountryTextField.text!, sendingCountry: sendingCountryTextFiled.text!, amount: remittanceCountryNumberTextField.text!, date: lookupTimeLabel2.text!)) { response in
             
             switch response {
                 case .success(let result):
@@ -302,6 +305,8 @@ class CalculatorVC: UIViewController, Stepper{
             }
             .disposed(by: disposeBag)
         
+        
+        
     }
     
     
@@ -326,7 +331,6 @@ class CalculatorVC: UIViewController, Stepper{
     
     @objc func onPickDone() {
         
-        fetchLookDetail()
         
         
         let str = dateFormatter.string(from: nowDate)
@@ -342,6 +346,7 @@ class CalculatorVC: UIViewController, Stepper{
         default:
             return
         }
+        Provide()
     }
 }
 

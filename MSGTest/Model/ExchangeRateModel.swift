@@ -11,7 +11,7 @@ import RxSwift
 
 import Foundation
 
-// MARK: - Welcome
+
 struct Welcome: Codable {
     let success: Bool
     let query: Query
@@ -21,13 +21,13 @@ struct Welcome: Codable {
     let result: Double
 }
 
-// MARK: - Info
+
 struct Info: Codable {
     let timestamp: Int
     let quote: Double
 }
 
-// MARK: - Query
+
 struct Query: Codable {
     let from, to: String
     let amount: Int
