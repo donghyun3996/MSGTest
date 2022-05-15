@@ -18,23 +18,48 @@ class ReceivableVC: UIViewController, Stepper {
     
     //MARK:- Propertise
     var steps = PublishRelay<Step>()
+ 
+    private let receivableLabel = UILabel().then{
+        $0.text = "수취금"
+        $0.frame = CGRect(x: 0, y: 0, width: 205, height: 38)
+        $0.font = .systemFont(ofSize: 28, weight: .bold)
+        
+        
+    }
     
     
-    private let BackNavigationButtonButton = UIButton().then {
-        $0.setTitle("뒤로가기", for: .normal)
-        $0.backgroundColor = .systemBlue
-        $0.addTarget(self, action: #selector(
-            BackNavigationButtonDidTap), for: .touchUpInside)
-            
-        }
+    private let remittanceCountryLabel = UILabel().then{
+        $0.text = "송금 국가:"
+        $0.font = .systemFont(ofSize: 16)
+    }
     
+    
+    private let sendingCountryLabel = UILabel().then{
+        $0.text = "송취 국가:"
+        $0.font = .systemFont(ofSize: 16)
+    }
+    
+     let remittanceCountryLabel2 = UILabel().then{
+        $0.text = ""
+        $0.font = .systemFont(ofSize: 16)
+    }
+    
+     let sendingCountryLabel2 = UILabel().then{
+        $0.text = ""
+        $0.font = .systemFont(ofSize: 16)
+    }
+    
+    private let receivableAmountLabel = UILabel().then{
+        $0.text = "121010101001"
+        $0.font = .systemFont(ofSize: 28)
+    }
     
     //MARK:- Lifecycle
     
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = .white
-                
+        navigationItem.leftBarButtonItem = UIBarButtonItem(barButtonSystemItem: .close, target: self, action: #selector(BackNavigationButtonDidTap))
         configurUI()
     }
     
@@ -46,19 +71,61 @@ class ReceivableVC: UIViewController, Stepper {
         setLayout()
         
       }
+    
+    func addsubView(){
+        
+        view.addSubview(receivableLabel)
+        view.addSubview(remittanceCountryLabel)
+        view.addSubview(remittanceCountryLabel2)
+        view.addSubview(sendingCountryLabel)
+        view.addSubview(sendingCountryLabel2)
+        view.addSubview(receivableAmountLabel)
+    }
       
       
       func setLayout(){
-          BackNavigationButtonButton.snp.makeConstraints{
-              $0.leading.trailing.bottom.equalToSuperview().inset(20)
-              $0.height.equalTo(50)
+          
+          
+          
+          receivableLabel.snp.makeConstraints{
+              $0.top.equalToSuperview().inset(112)
+              $0.centerX.equalToSuperview()
           }
-      }
+          
+          remittanceCountryLabel.snp.makeConstraints{
+              $0.top.equalTo(receivableLabel.snp_bottomMargin).offset(40)
+              $0.leading.equalToSuperview().inset(50)
+          }
+          
+          sendingCountryLabel.snp.makeConstraints{
+              $0.top.equalTo(receivableLabel.snp_bottomMargin).offset(90)
+              $0.leading.equalToSuperview().inset(50)
+          }
+          
+          remittanceCountryLabel2.snp.makeConstraints{
+              $0.top.equalTo(receivableLabel.snp_bottomMargin).offset(40)
+              $0.trailing.equalToSuperview().inset(40)
+              
+              
+          }
+          
+          sendingCountryLabel2.snp.makeConstraints{
+              $0.top.equalTo(receivableLabel.snp_bottomMargin).offset(90)
+              $0.trailing.equalToSuperview().inset(40)
+              
+              
+              }
+          receivableAmountLabel.snp.makeConstraints{
+              $0.top.equalTo(receivableLabel.snp_bottomMargin).offset(194)
+              $0.centerX.equalToSuperview()
+          }
+          
+          
+          
+      } 
       
       
-      func addsubView(){
-          view.addSubview(BackNavigationButtonButton)
-      }
+      
       
 
     

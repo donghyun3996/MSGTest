@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C9205593282F672B006C71A0 /* ExchangeRateModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9205592282F672B006C71A0 /* ExchangeRateModel.swift */; };
+		C9857FCF282FD14B00BBB8CF /* exchangeratesAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9857FCE282FD14B00BBB8CF /* exchangeratesAPI.swift */; };
 		C997886A282CB0E100623CCF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9978869282CB0E100623CCF /* AppDelegate.swift */; };
 		C997886C282CB0E100623CCF /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C997886B282CB0E100623CCF /* SceneDelegate.swift */; };
 		C9978873282CB0E200623CCF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C9978872282CB0E200623CCF /* Assets.xcassets */; };
@@ -25,6 +27,8 @@
 		8C7D95208BE68A6CDA2D7C5E /* Pods-MSGTest.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MSGTest.release.xcconfig"; path = "Target Support Files/Pods-MSGTest/Pods-MSGTest.release.xcconfig"; sourceTree = "<group>"; };
 		A3A3A2610FF143774D7786DB /* Pods_MSGTest.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MSGTest.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C19B6DC5900D554ECFA3823E /* Pods-MSGTest.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MSGTest.debug.xcconfig"; path = "Target Support Files/Pods-MSGTest/Pods-MSGTest.debug.xcconfig"; sourceTree = "<group>"; };
+		C9205592282F672B006C71A0 /* ExchangeRateModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExchangeRateModel.swift; sourceTree = "<group>"; };
+		C9857FCE282FD14B00BBB8CF /* exchangeratesAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = exchangeratesAPI.swift; sourceTree = "<group>"; };
 		C9978866282CB0E100623CCF /* MSGTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MSGTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C9978869282CB0E100623CCF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C997886B282CB0E100623CCF /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -60,6 +64,46 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		C9205591282F66F0006C71A0 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				C9205592282F672B006C71A0 /* ExchangeRateModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		C9205594282FAAEE006C71A0 /* Source */ = {
+			isa = PBXGroup;
+			children = (
+				C9205595282FAB01006C71A0 /* App */,
+			);
+			path = Source;
+			sourceTree = "<group>";
+		};
+		C9205595282FAB01006C71A0 /* App */ = {
+			isa = PBXGroup;
+			children = (
+				C9978869282CB0E100623CCF /* AppDelegate.swift */,
+				C997886B282CB0E100623CCF /* SceneDelegate.swift */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		C9857FC8282FAF6800BBB8CF /* Netwark */ = {
+			isa = PBXGroup;
+			children = (
+				C9857FCE282FD14B00BBB8CF /* exchangeratesAPI.swift */,
+			);
+			path = Netwark;
+			sourceTree = "<group>";
+		};
+		C9857FCB282FB29900BBB8CF /* VM */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = VM;
+			sourceTree = "<group>";
+		};
 		C997885D282CB0E100623CCF = {
 			isa = PBXGroup;
 			children = (
@@ -81,14 +125,16 @@
 		C9978868282CB0E100623CCF /* MSGTest */ = {
 			isa = PBXGroup;
 			children = (
-				C9978869282CB0E100623CCF /* AppDelegate.swift */,
-				C997886B282CB0E100623CCF /* SceneDelegate.swift */,
-				C9978872282CB0E200623CCF /* Assets.xcassets */,
-				C9978874282CB0E200623CCF /* LaunchScreen.storyboard */,
-				C9978877282CB0E200623CCF /* Info.plist */,
+				C9857FCB282FB29900BBB8CF /* VM */,
+				C9857FC8282FAF6800BBB8CF /* Netwark */,
+				C9205594282FAAEE006C71A0 /* Source */,
+				C9205591282F66F0006C71A0 /* Model */,
 				C9978889282CFF5C00623CCF /* Steps */,
 				C9978888282CFF4D00623CCF /* VC */,
 				C9978887282CFF3900623CCF /* Flows */,
+				C9978872282CB0E200623CCF /* Assets.xcassets */,
+				C9978874282CB0E200623CCF /* LaunchScreen.storyboard */,
+				C9978877282CB0E200623CCF /* Info.plist */,
 			);
 			path = MSGTest;
 			sourceTree = "<group>";
@@ -246,12 +292,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C9205593282F672B006C71A0 /* ExchangeRateModel.swift in Sources */,
 				C9978886282CF9D900623CCF /* DemoStep.swift in Sources */,
 				C997888B282D47B900623CCF /* CalculatorFlow.swift in Sources */,
 				C997886A282CB0E100623CCF /* AppDelegate.swift in Sources */,
 				C9978882282CF74400623CCF /* AppFlow.swift in Sources */,
 				C997886C282CB0E100623CCF /* SceneDelegate.swift in Sources */,
 				C997888F282D4C6300623CCF /* AppStepper.swift in Sources */,
+				C9857FCF282FD14B00BBB8CF /* exchangeratesAPI.swift in Sources */,
 				C997888D282D498900623CCF /* ReceivableFlow.swift in Sources */,
 				C9978884282CF8E200623CCF /* ReceivableVC.swift in Sources */,
 				C997887E282CB10200623CCF /* CalculatorVC.swift in Sources */,
