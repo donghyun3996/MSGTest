@@ -28,9 +28,7 @@ extension exchangeratesAPI: TargetType{
         case .exchage(let remittanceCountry, let sendingCountry,let amount, let date):
             print(sendingCountry)
             return "&from=\(remittanceCountry)&to=\(sendingCountry)&amount=\(amount)&date=\(date)"
-            
-            
-//        https://api.apilayer.com/currency_data/convert?&apikey=TMq3mUCMLtGSGtSzB00JBE48Zr0mqEdx&from=USD&to=EUR&amount=5&date=2022-05-14
+        
         }
         
     }

@@ -75,7 +75,12 @@
 		C9205594282FAAEE006C71A0 /* Source */ = {
 			isa = PBXGroup;
 			children = (
-				C9205595282FAB01006C71A0 /* App */,
+				C9978887282CFF3900623CCF /* Flows */,
+				C9978889282CFF5C00623CCF /* Steps */,
+				C9857FC8282FAF6800BBB8CF /* Netwark */,
+				C9205591282F66F0006C71A0 /* Model */,
+				C9857FCB282FB29900BBB8CF /* VM */,
+				C9978888282CFF4D00623CCF /* VC */,
 			);
 			path = Source;
 			sourceTree = "<group>";
@@ -125,13 +130,8 @@
 		C9978868282CB0E100623CCF /* MSGTest */ = {
 			isa = PBXGroup;
 			children = (
-				C9857FCB282FB29900BBB8CF /* VM */,
-				C9857FC8282FAF6800BBB8CF /* Netwark */,
+				C9205595282FAB01006C71A0 /* App */,
 				C9205594282FAAEE006C71A0 /* Source */,
-				C9205591282F66F0006C71A0 /* Model */,
-				C9978889282CFF5C00623CCF /* Steps */,
-				C9978888282CFF4D00623CCF /* VC */,
-				C9978887282CFF3900623CCF /* Flows */,
 				C9978872282CB0E200623CCF /* Assets.xcassets */,
 				C9978874282CB0E200623CCF /* LaunchScreen.storyboard */,
 				C9978877282CB0E200623CCF /* Info.plist */,
@@ -147,7 +147,7 @@
 				C997888C282D498900623CCF /* ReceivableFlow.swift */,
 			);
 			name = Flows;
-			path = ..;
+			path = ../..;
 			sourceTree = "<group>";
 		};
 		C9978888282CFF4D00623CCF /* VC */ = {
@@ -157,7 +157,7 @@
 				C9978883282CF8E200623CCF /* ReceivableVC.swift */,
 			);
 			name = VC;
-			path = ..;
+			path = ../..;
 			sourceTree = "<group>";
 		};
 		C9978889282CFF5C00623CCF /* Steps */ = {
